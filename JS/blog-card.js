@@ -1,4 +1,5 @@
 const wpUrl = 'https://project-exam.wp-andersnes.no/wp-json/wp/v2/posts?_embed'
+const parentElement = document.getElementById('div-last-post');
 
 
 async function getPosts() {
@@ -15,6 +16,9 @@ async function renderblogcard() {
     const post = await getPosts();
         post.forEach((blogpost) => {
 
+            const blogcard = document.createElement('div');
+            blogcard.classList.add('blog-card');
+
             const title = blogpost.title.rendered;
             const featuredImageURL = blogpost._embedded['wp:featuredmedia']['0'].source_url;
         
@@ -29,9 +33,11 @@ async function renderblogcard() {
             imageElement.classList.add('blog-card-image');
         
             // Append the title and image elements to a parent element
-            const parentElement = document.getElementById('div-last-post');
-            parentElement.appendChild(titleElement);
-            parentElement.appendChild(imageElement);
+
+            blogcard.appendChild(imageElement);
+            blogcard.appendChild(titleElement);
+            parentElement.appendChild(blogcard);
+            
          });
 
 }
