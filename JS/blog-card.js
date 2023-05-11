@@ -1,4 +1,5 @@
 const wpUrl = 'https://project-exam.wp-andersnes.no/wp-json/wp/v2/posts?_embed'
+
 const parentElement = document.getElementById('div-last-post');
 
 
