@@ -17,7 +17,7 @@ async function getPosts(page) {
 async function renderBlogCards() {
   const posts = await getPosts(currentPage);
 
-  // Clear the parent element
+  // Clearing the parent element
   parentElement.innerHTML = '';
 
   posts.forEach((blogpost) => {
@@ -27,20 +27,22 @@ async function renderBlogCards() {
     const title = blogpost.title.rendered;
     const featuredImageURL = blogpost._embedded['wp:featuredmedia'][0].source_url;
 
-    // Create a new element for the title
     const titleElement = document.createElement('h1');
     titleElement.textContent = title;
     titleElement.classList.add('blog-card-title');
 
-    // Create a new element for the featured image
+
     const imageElement = document.createElement('img');
     imageElement.src = featuredImageURL;
     imageElement.classList.add('blog-card-image');
 
-    // Append the title and image elements to the parent element
     blogcard.appendChild(imageElement);
     blogcard.appendChild(titleElement);
     parentElement.appendChild(blogcard);
+
+    blogcard.addEventListener('click', () => {
+      window.location.href = `blogdetail.html?id=${blogpost.id}`;
+    });
   });
 }
 
