@@ -37,24 +37,12 @@ async function renderBlogPost() {
     // Add click event listener to each image
     image.addEventListener('click', (event) => {
       event.stopPropagation(); // Stop event propagation to prevent closing the popup
-
-      // Hide other open popups
-      const openPopups = document.querySelectorAll('.image-container.popup');
-      openPopups.forEach((popup) => {
-        popup.classList.remove('popup');
-      });
-
-      container.classList.add('popup');
+      container.classList.toggle('popup');
     });
-  });
 
-  // Add click event listener to the document to close the popup when clicked outside the image or overlay
-  document.addEventListener('click', (event) => {
-    const openPopups = document.querySelectorAll('.image-container.popup');
-    openPopups.forEach((popup) => {
-      if (!popup.contains(event.target) && !event.target.classList.contains('overlay')) {
-        popup.classList.remove('popup');
-      }
+    // Add click event listener to the popup to close it when clicked
+    container.addEventListener('click', (event) => {
+      container.classList.remove('popup');
     });
   });
 
