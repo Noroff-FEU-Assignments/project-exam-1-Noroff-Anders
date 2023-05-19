@@ -218,7 +218,7 @@ border-radius: 5px;
   max-width: 400px;
   border-radius: 10px;
   height: 300px;
-  color: black;
+  color: rgb(0, 0, 0);
   transition: transform 0.5s ease-in-out; /* Add transition property */
 }
 
@@ -253,7 +253,7 @@ border-radius: 5px;
     align-items: center;
     color: black;
     border-radius: 0px 0px 10px 10px;
-    border: solid 1px black;
+    border: solid 1px grey;
     
 }
 
