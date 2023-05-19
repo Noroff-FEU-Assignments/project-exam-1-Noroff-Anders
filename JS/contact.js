@@ -15,7 +15,7 @@ function formVal(event){
 
     const inputErrors = [];
 
-    if (yourName.value.length === 0){
+    if (yourName.value.length < 5){
         inputErrors.push("1");
         nameError.style.display = "block";
         yourName.style.borderColor = "red";

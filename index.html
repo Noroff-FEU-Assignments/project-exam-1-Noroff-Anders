@@ -17,10 +17,10 @@
                 </div>
                 <div>
                     <ul class="ul-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="blogpost.html">All Blogs</a></li>
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="contact.html">contact</a></li>
+                        <li class="li-nav"><a class="nav-but" href="index.html">Home</a></li>
+                        <li class="li-nav"><a class="nav-but" href="blogpost.html">All Blogs</a></li>
+                        <li class="li-nav"><a class="nav-but" href="index.html">About</a></li>
+                        <li class="li-nav"><a class="nav-but" href="contact.html">contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -29,21 +29,18 @@
         <main>
 
             <div class="header-container">
-                <div class="div-header-image">
-                    <div class="image-container">
-                        <img src="Assets/img/pexels-crypto-crow-1447418.jpg" alt="logo" class="header-image">
-                    </div>
+                <div class="div-header-content">
                     <div class="image-container">
                         <img src="Assets/img/pexels-thought-catalog-2228570.jpg" alt="logo" class="header-image">
                     </div>
                     <div class="header-text">
-                        <h1> Everything crypto!</h1>
-                        <p class="header-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, voluptatibus libero voluptate vel, molestias ullam quaerat necessitatibus aut cupiditate quas, optio voluptatem hic alias! Labore deleniti quidem exercitationem totam sint?</p>
+                        <h1 class="header-h1"> Everything crypto!</h1>
+                        <p class="header-p">Welcome to BlogCoin, your ultimate source for everything crypto!. Whether you're a seasoned investor, a curious beginner, or simply interested in the technology behind cryptocurrencies, our comprehensive articles cover a wide range of topics in the crypto sphere. Join our community of crypto enthusiasts as we explore decentralized finance, tokenomics, altcoins, and more. Get ready to dive into the transformative world of digital currencies and uncover their potential with BlogCoin.</p>
                     </div>
                 </div>
             </div>    
             <div class="div-last-post-title">
-               <h1 class="last-post-title"><strong>Latest Blog Posts</strong></h1> 
+               <h1 class="last-post-title">Latest Blog Posts</h1> 
             </div>
             <div class="container-slider">
                 <button class="btn-slider" id="btn-left"> <i class="fa-solid fa-arrow-right fa-rotate-180"></i>
@@ -51,12 +48,20 @@
                 <button class="btn-slider" id="btn-right"> <i class="fa-solid fa-arrow-right"></i>   
                 </button>
             </div>
-
-            <div class="container-last-post">
+            <div id="blogContainer">
+                <div class="container-last-post">
                     <div id="div-last-post">
                     
                     </div>     
+                </div>
             </div>
+            <div id="indicatorContainer">
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+            </div>
+              
+            
             <div class="footer">
 
             </div>

@@ -48,22 +48,58 @@ async function renderBlogCards() {
 
 // Function to handle the next button click event
 function handleNextButtonClick() {
+  const blogContainer = document.getElementById('blogContainer');
+  const indicators = document.querySelectorAll('.indicator');
+  
   currentPage++; // Increment the current page
 
   if (currentPage > 3) {
     currentPage = 1; // Go back to the starting page
   }
-  renderBlogCards(); // Render the next set of posts
+  
+  blogContainer.style.opacity = 0; // Fade out the container
+  indicators[currentPage - 1].classList.add('active'); // Activate the corresponding indicator
+  
+  setTimeout(() => {
+    renderBlogCards(); // Render the next set of posts
+    
+    // Fade in the container after the rendering is complete
+    blogContainer.style.opacity = 1;
+  }, 500); // Delay the rendering to allow the fade-out transition to complete
+  
+  // Deactivate the previous indicator
+  indicators[currentPage - 2 >= 0 ? currentPage - 2 : 2].classList.remove('active');
 }
 
 function handleBackButtonClick() {
-  currentPage--; // Increment the current page
+  const blogContainer = document.getElementById('blogContainer');
+  const indicators = document.querySelectorAll('.indicator');
+  
+  currentPage--; // Decrement the current page
+  
   if (currentPage < 1) {
     currentPage = 3; // Go back to the starting page
   }
+  
+  blogContainer.style.opacity = 0; // Fade out the container
+  indicators[currentPage - 1].classList.add('active'); // Activate the corresponding indicator
+  
+  setTimeout(() => {
+    renderBlogCards(); // Render the previous set of posts
+    
+    // Fade in the container after the rendering is complete
+    blogContainer.style.opacity = 1;
+  }, 500); // Delay the rendering to allow the fade-out transition to complete
+  
+  // Deactivate the previous indicator
+  const previousIndicatorIndex = (currentPage - 1 + 1) % 3;
+  indicators[previousIndicatorIndex].classList.remove('active');
+}
+
+
 
   renderBlogCards(); // Render the next set of posts
-}
+
 
 // Attach the next button click event listener
 const nextButton = document.getElementById('btn-right');
