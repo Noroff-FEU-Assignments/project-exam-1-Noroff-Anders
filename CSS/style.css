@@ -8,17 +8,14 @@ html {
     font-size: 16px;
   }
   
-  *, *:before, *:after {
-    box-sizing: inherit;
-    font-family: 'Noticia Text', serif;
 
-
-  }
   
   body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    box-sizing: inherit;
+    font-family: 'Noticia Text', serif;
   }
   
   ol, ul {
@@ -30,7 +27,7 @@ html {
     height: auto;
   }
 
-/* nav styling */
+
 *{
     margin: 0;
     padding: 0;
@@ -40,78 +37,64 @@ a{
 }
 
 main{
-  margin-top: 150px
-}
-
-.nav{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 150px;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    position: fixed;
-    top: 0;
-    border-bottom: 1px solid grey ;
-}
-
-.ul-nav{
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-
-}
-.li-nav{
-  text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    font-size: 20px;
-    border-radius: 10px;
-}
-
-.nav-but {
-  color: black;
-  text-decoration: none;
-  width: 100px;
-  border-radius: 5px;
+  margin-top: 150px;
   padding: 5px;
-  position: relative; /* Add relative positioning */
 }
 
-.nav-but::after {
-  content: '';
-  position: absolute;
+footer{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid black;
   bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: orange;
-  transition: width 0.3s ease-in-out; /* Add transition for smooth effect */
+  position: relative;
 }
 
-.nav-but:hover::after {
-  width: 100%; /* Expand the line on hover */
+.footer-h3{
+  text-decoration: underline orange 3px;
 }
+
+.div-push-footer{
+  height: 200px;
+}
+
+/* nav styling */
+
 .div-logo{
   width: 100%;
   max-width: 400px;
-  height: 400px;
+  height: 100%;
 }
 .logo{
   height: 100px;
   width: 200px;
 }
 
+.div-hamburger-icon{
+  display: none;
+  align-items: center;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid grey ;
+  z-index: 2;
+}
+
+#hamburer{
+  display: flex;
+  text-align: center;
+
+}
 
 /* header styling */
 
@@ -194,7 +177,7 @@ border-radius: 5px;
   width: 100%;
   justify-content: center;
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .container-last-post{
@@ -212,14 +195,35 @@ border-radius: 5px;
     flex-wrap: wrap;
 }
 
+#btn-right,#btn-left{
+  margin-top: 20px;
+  font-size: 40px;
+  padding: 10px;
+  border-radius:50%;
+  background-color: white;
+  color: rgb(202, 134, 6);
+  border-color: black;
+  border: none;
+}
+
+#btn-right:hover,#btn-left:hover{
+  cursor: pointer;
+  background-color: rgb(202, 134, 6);
+  color: white;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+
 
 .blog-card {
   width: 100%;
   max-width: 400px;
   border-radius: 10px;
   height: 300px;
+  background-color:rgb(202, 134, 6);;
   color: rgb(0, 0, 0);
   transition: transform 0.5s ease-in-out; /* Add transition property */
+  z-index: 1;
 }
 
 .blog-card:hover {
@@ -251,25 +255,22 @@ border-radius: 5px;
     font-size: 30px;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     border-radius: 0px 0px 10px 10px;
-    border: solid 1px grey;
     
 }
 
 .blog-card:hover > .blog-card-title { 
-  background-color: orange;
+  background-color: rgb(202, 134, 6);
   color: white; 
 }
 
-.btn-slider{
-  transition: smooth 2s;
-}
 
 #blogContainer {
   transition: opacity 1s ease-in-out;
 }
 #indicatorContainer{
+  margin-top: 50px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -390,5 +391,142 @@ border-radius: 5px;
   display: flex;
   display: none;
 }
+/* all blog posts styling */
+
+.all-blog-h1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  text-decoration:underline 3px rgb(202, 134, 6);;
+}
+
+
+.div-load-more{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#load-more-button{
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(202, 134, 6);
+}
+
+#load-more-button:hover{
+  background-color: white;
+  color: rgb(202, 134, 6);
+
+}
+
+/* contact styling */
+
+.con-title,.con-h2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width:1301px){
+  .nav-button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .nav-but {
+    color: black;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .nav-but::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.3s ease-in-out; /* Add transition for smooth effect */
+  }
+  
+  .nav-but:hover::after {
+    width: 100%; /* Expand the line on hover */
+  }
+
+
+ 
+
+
+  .div-hamburger-icon{
+    display: none;
+  }
+  
+}
+
+
+@media (max-width:1300px){
+
+  .nav-button {
+    position: fixed;
+    height: 500px;
+    margin-top: 100px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+  
+  }
+  
+    .nav-but{
+      color: white;
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      background-color: orange;
+      padding: 20px;
+    }
+
+    .nav-but:active{
+      background-color: rgb(236, 108, 22);
+    }
+  
+    .div-hamburger-icon{
+      display: flex;
+      margin-right: 20px;
+      font-size: 20px;
+      color: orange;
+    }
+    
+    .container-slider{
+      display: none;
+    }
+
+    #indicatorContainer{
+      display: none;
+    }
+
+ }
+
+
+ 
+
 
 

@@ -4,70 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eed746e6fc.js" crossorigin="anonymous"></script>
     <link href="CSS/style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav class="nav">
-            <div class="div-logo">
-               <a href="index.html">  <img class="logo"  src="Assets/img/2023-05-11_20_33_12-Edit_your_own_logo_-_LogoAi.com___Brave-removebg-preview.png" alt="logo"></a>
-            </div>
-            <div>
-                <ul class="ul-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="blogpost.html">All Blogs</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+            
+    <nav class="nav">
+        <div class="div-logo">
+           <a href="index.html">  <img class="logo"  src="Assets/img/2023-05-11_20_33_12-Edit_your_own_logo_-_LogoAi.com___Brave-removebg-preview.png" alt="logo" ></a>
+        </div>
+        <div class="nav-button">
+            <a class="nav-but" href="index.html">Home</a>
+            <a class="nav-but" href="blogpost.html">All Blogs</a>
+            <a class="nav-but" href="about.html">About</a>
+            <a class="nav-but" href="contact.html">Contact</a>
+        </div>
+        <div class="div-hamburger-icon">
+            <i id="hamburger" class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+</header>
     <main>
-        <h1 class="con-title" > Experiencing issues?</h1>
-        <h2 class="con-h2"> Let us know by filling the form below </h2>
-        <form id="formContact">
-          <div class="contact-div"> 
-            <div class="contact-container">
+        <h1 class="con-title" > Contact us</h1>
+        <h2 class="con-h2"> Reach out by filling the form below</h2>
+          <form id="formContact">
+            <div class="contact-div"> 
+              <div class="contact-container">
+                
+                  <div class="contact-div-input">
+                  <label for="email"></label>
+                  <input class="contact" type="email" placeholder="Enter your email address" name="email2" id="email" >
+                  <div class="error" id="email-error">Please enter a valid email address</div>
+                </div>
+                
+                <div class="contact-div-input">
+                  <label for="name"></label>
+                  <input class="contact" type="text" placeholder="Enter your full name" name="Full Name" id="name" >
+                  <div class="error" id="name-error">Please enter your name, 5 characters mininum</div>
+                </div>
               
                 <div class="contact-div-input">
-                <label for="email"></label>
-                <input class="contact" type="email" placeholder="Enter your email address" name="email2" id="email" >
-                <div class="error" id="email-error">Please enter a valid email address</div>
-              </div>
+                  <label for="subject"></label>
+                  <input class="contact" type="text" placeholder="Subject" name="subject" id="subject" >
+                  <div class="error" id="subject-error">Subject must be 15 characters mininum </div>
+                </div>
               
-              <div class="contact-div-input">
-                <label for="name"></label>
-                <input class="contact" type="text" placeholder="Enter your full name" name="Full Name" id="name" >
-                <div class="error" id="name-error">Please enter your name, 5 characters mininum</div>
-              </div>
-             
-              <div class="contact-div-input">
-                <label for="subject"></label>
-                <input class="contact" type="text" placeholder="Subject" name="subject" id="subject" >
-                <div class="error" id="subject-error">Subject must be 15 characters mininum </div>
-              </div>
-             
-              <div class="contact-div-input">
-                <label for="message"></label>
-                <input class="contact-message" placeholder="Type your message here..." name="message" id="message" rows="5" minlength="10" ></input>
-                <div class="error" id="message-error">Please enter a message that is at least 25 characters long</div>
+                <div class="contact-div-input">
+                  <label for="message"></label>
+                  <input class="contact-message" placeholder="Type your message here..." name="message" id="message" rows="5" minlength="10" ></input>
+                  <div class="error" id="message-error">Please enter a message that is at least 25 characters long</div>
+                
               
-            
+              </div>
+                <div class="su-but">
+                  <button type="submit" class="signup-button" id="form-submit">Submit</button>
+                </div>
+
+                <div class="div-form-success">
+                  <div id="form-success"> Form succsesfully submitted</div>
+                </div>
+
+              </div>        
             </div>
-              <div class="su-but">
-                <button type="submit" class="signup-button" id="form-submit">Submit</button>
-              </div>
+          </form>
+      </main>
+        <div class="div-push-footer"></div>
 
-              <div class="div-form-success">
-                <div id="form-success"> Form succsesfully submitted</div>
-              </div>
-
-            </div>        
-          </div>
-        </form>
-        </main>
-        <footer></footer>
+        <footer>
+            <h3 class="footer-h3"> Copyright 2015-2023 &copy </h3>
+        </footer>
         <script src="/JS/contact.js" type="module"></script>
+        <script src="/JS/hamburger.js" type="module"></script>
     </body>
 </html>

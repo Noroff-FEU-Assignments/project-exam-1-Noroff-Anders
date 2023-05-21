@@ -13,30 +13,38 @@
             
         <nav class="nav">
             <div class="div-logo">
-               <a href="index.html">  <img class="logo"  src="Assets/img/2023-05-11_20_33_12-Edit_your_own_logo_-_LogoAi.com___Brave-removebg-preview.png" alt="logo"></a>
+               <a href="index.html">  <img class="logo"  src="Assets/img/2023-05-11_20_33_12-Edit_your_own_logo_-_LogoAi.com___Brave-removebg-preview.png" alt="logo" ></a>
             </div>
-            <div>
-                <ul class="ul-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="blogpost.html">All Blogs</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
+            <div class="nav-button">
+                <a class="nav-but" href="index.html">Home</a>
+                <a class="nav-but" href="blogpost.html">All Blogs</a>
+                <a class="nav-but" href="about.html">About</a>
+                <a class="nav-but" href="contact.html">Contact</a>
+            </div>
+            <div class="div-hamburger-icon">
+                <i id="hamburger" class="fa-solid fa-bars"></i>
             </div>
         </nav>
-        <main>
-            <h1> All Blogposts</h1>
-            <div id="div-last-post">
 
-            </div>
-
-            <button id="load-more-button">Load More</button>
-
-        </main>
-
-        
     </header>
+    <main>
+        <h1 class="all-blog-h1"> All Blogposts</h1>
+        <div id="div-last-post">
+
+        </div>
+        <div class="div-load-more">               
+            <button id="load-more-button">Load More</button>
+        </div>
+    </main>
+
+    <div class="div-push-footer"></div>
+    <footer>
+        <h3 class="footer-h3"> Copyright 2015-2023 &copy </h3>
+    </footer>
+        
+
 
     <script src="/JS/all-blog-cards.js" type="module"></script>
+    <script src="/JS/hamburger.js" type="module"></script>
 </body>
 </html>

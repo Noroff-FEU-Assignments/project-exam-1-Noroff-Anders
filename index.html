@@ -13,15 +13,16 @@
             
             <nav class="nav">
                 <div class="div-logo">
-                   <a href="index.html">  <img class="logo"  src="Assets/img/2023-05-11_20_33_12-Edit_your_own_logo_-_LogoAi.com___Brave-removebg-preview.png" alt="logo"></a>
+                   <a href="index.html">  <img class="logo"  src="Assets/img/2023-05-11_20_33_12-Edit_your_own_logo_-_LogoAi.com___Brave-removebg-preview.png" alt="logo" ></a>
                 </div>
-                <div>
-                    <ul class="ul-nav">
-                        <li class="li-nav"><a class="nav-but" href="index.html">Home</a></li>
-                        <li class="li-nav"><a class="nav-but" href="blogpost.html">All Blogs</a></li>
-                        <li class="li-nav"><a class="nav-but" href="index.html">About</a></li>
-                        <li class="li-nav"><a class="nav-but" href="contact.html">contact</a></li>
-                    </ul>
+                <div class="nav-button">
+                    <a class="nav-but" href="index.html">Home</a>
+                    <a class="nav-but" href="blogpost.html">All Blogs</a>
+                    <a class="nav-but" href="about.html">About</a>
+                    <a class="nav-but" href="contact.html">Contact</a>
+                </div>
+                <div class="div-hamburger-icon">
+                    <i id="hamburger" class="fa-solid fa-bars"></i>
                 </div>
             </nav>
 
@@ -31,23 +32,18 @@
             <div class="header-container">
                 <div class="div-header-content">
                     <div class="image-container">
-                        <img src="Assets/img/pexels-thought-catalog-2228570.jpg" alt="logo" class="header-image">
+                        <img src="Assets/img/pexels-crypto-crow-1447418-min.jpg" alt="logo" class="header-image">
                     </div>
                     <div class="header-text">
                         <h1 class="header-h1"> Everything crypto!</h1>
-                        <p class="header-p">Welcome to BlogCoin, your ultimate source for everything crypto!. Whether you're a seasoned investor, a curious beginner, or simply interested in the technology behind cryptocurrencies, our comprehensive articles cover a wide range of topics in the crypto sphere. Join our community of crypto enthusiasts as we explore decentralized finance, tokenomics, altcoins, and more. Get ready to dive into the transformative world of digital currencies and uncover their potential with BlogCoin.</p>
+                        <p class="header-p">Welcome to BlogCoin, your ultimate source for everything crypto!. Whether you're a seasoned investor, a curious beginner, or simply interested in the technology behind cryptocurrencies, our comprehensive articles cover a wide range of topics in the crypto sphere.</p>
                     </div>
                 </div>
             </div>    
             <div class="div-last-post-title">
                <h1 class="last-post-title">Latest Blog Posts</h1> 
             </div>
-            <div class="container-slider">
-                <button class="btn-slider" id="btn-left"> <i class="fa-solid fa-arrow-right fa-rotate-180"></i>
-                </button>
-                <button class="btn-slider" id="btn-right"> <i class="fa-solid fa-arrow-right"></i>   
-                </button>
-            </div>
+           
             <div id="blogContainer">
                 <div class="container-last-post">
                     <div id="div-last-post">
@@ -55,10 +51,17 @@
                     </div>     
                 </div>
             </div>
+            
             <div id="indicatorContainer">
                 <div class="indicator"></div>
                 <div class="indicator"></div>
                 <div class="indicator"></div>
+            </div>
+            <div class="container-slider">
+                <button class="btn-slider" id="btn-left"> <i class="fa-solid fa-arrow-right fa-rotate-180"></i>
+                </button>
+                <button class="btn-slider" id="btn-right"> <i class="fa-solid fa-arrow-right"></i>   
+                </button>
             </div>
               
             
@@ -66,10 +69,16 @@
 
             </div>
 
-            <script src="JS/blog-card.js" type="module" ></script>
+            
         </main>
-        <footer>
 
+        <div class="div-push-footer"></div>
+
+        <footer>
+            <h3 class="footer-h3"> Copyright 2015-2023 &copy </h3>
         </footer>
+
+        <script src="/JS/hamburger.js" type="module"></script>
+        <script src="JS/blog-card.js" type="module" ></script>
     </body>
 </html>
