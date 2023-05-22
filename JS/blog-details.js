@@ -21,10 +21,11 @@ async function renderBlogPost() {
   // Render the blog post details on the page
   const title = document.createElement('h1');
   title.textContent = post.title.rendered; // Assign the title text
-
+  title.classList.add('blog-details-title');
   // Render the blog post details on the page
   const content = document.createElement('div');
   content.innerHTML = post.content.rendered; // Assign the content as HTML
+  content.classList.add('blog-details-content');
 
   // Wrap images with a container and add classes
   const images = content.querySelectorAll('img');
@@ -33,6 +34,7 @@ async function renderBlogPost() {
     container.classList.add('image-container');
     image.parentNode.insertBefore(container, image);
     container.appendChild(image);
+    image.classList.add('blog-details-image');
 
     // Add click event listener to each image
     image.addEventListener('click', (event) => {
