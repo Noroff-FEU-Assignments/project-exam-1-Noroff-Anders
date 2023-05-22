@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/eed746e6fc.js" crossorigin="anonymous"></script>
-    <link href="CSS/style.css" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-  <header>
-            
-    <nav class="nav">
-        <div class="div-logo">
-           <a href="index.html">  <img class="logo"  src="Assets/img/2023-05-11_20_33_12-Edit_your_own_logo_-_LogoAi.com___Brave-removebg-preview.png" alt="logo" ></a>
-        </div>
-        <div class="nav-button">
-            <a class="nav-but" href="index.html">Home</a>
-            <a class="nav-but" href="blogpost.html">All Blogs</a>
-            <a class="nav-but" href="about.html">About</a>
-            <a class="nav-but" href="contact.html">Contact</a>
-        </div>
-        <div class="div-hamburger-icon">
-            <i id="hamburger" class="fa-solid fa-bars"></i>
-        </div>
-    </nav>
+  <head>
+          <!-- Hotjar Tracking Code for Project exam -->
+      <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3502787,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      </script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/eed746e6fc.js" crossorigin="anonymous"></script>
+      <link href="CSS/style.css" rel="stylesheet">
+      <title>Document</title>
+  </head>
+  <body>
+      <header>
+                
+        <nav class="nav">
+            <div class="div-logo">
+              <a href="index.html">  <img class="logo"  src="Assets/img/2023-05-11_20_33_12-Edit_your_own_logo_-_LogoAi.com___Brave-removebg-preview.png" alt="logo" ></a>
+            </div>
+            <div class="nav-button">
+                <a class="nav-but" href="index.html">Home</a>
+                <a class="nav-but" href="blogpost.html">All Blogs</a>
+                <a class="nav-but" href="about.html">About</a>
+                <a class="nav-but" href="contact.html">Contact</a>
+            </div>
+            <div class="div-hamburger-icon">
+                <i id="hamburger" class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
 
-</header>
+    </header>
     <main>
         <h1 class="con-title" > Contact us</h1>
         <h2 class="con-h2"> Reach out by filling the form below</h2>
@@ -54,11 +65,10 @@
               
                 <div class="contact-div-input">
                   <label for="message"></label>
-                  <input class="contact-message" placeholder="Type your message here..." name="message" id="message" rows="5" minlength="10" ></input>
+                  <textarea class="contact-message" placeholder="Type your message here..." name="message" id="message" rows="5" minlength="10"></textarea>
                   <div class="error" id="message-error">Please enter a message that is at least 25 characters long</div>
+                </div>
                 
-              
-              </div>
                 <div class="su-but">
                   <button type="submit" class="signup-button" id="form-submit">Submit</button>
                 </div>
@@ -66,17 +76,21 @@
                 <div class="div-form-success">
                   <div id="form-success"> Form succsesfully submitted</div>
                 </div>
+              
+              </div>
+               
+
+                
 
               </div>        
             </div>
           </form>
       </main>
-        <div class="div-push-footer"></div>
-
-        <footer>
-            <h3 class="footer-h3"> Copyright 2015-2023 &copy </h3>
-        </footer>
-        <script src="/JS/contact.js" type="module"></script>
-        <script src="/JS/hamburger.js" type="module"></script>
-    </body>
+      <div class="div-push-footer"></div>
+      <footer>
+          <h3 class="footer-h3"> Copyright 2015-2023 &copy </h3>
+      </footer>
+          <script src="/JS/contact.js" type="module"></script>
+          <script src="/JS/hamburger.js" type="module"></script>
+  </body>
 </html>

@@ -327,7 +327,7 @@ border-radius: 5px;
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
-  text-decoration:underline 3px rgb(255, 166, 0);
+  text-decoration:underline 3px #F47F20;
 }
 
 .contact-div,.su-but{
@@ -347,7 +347,7 @@ border-radius: 5px;
   border-radius: 10px;
   margin: 20px;
   padding-bottom: 20px;
-  border: solid rgb(255, 166, 0) 1px;
+  border: solid #F47F20 1px;
 }
 
 
@@ -391,6 +391,20 @@ border-radius: 5px;
   color: #00e641;
   font-size: 50px;
   display: none;
+}
+.error{
+  text-align: center;
+}
+
+#form-submit{
+  width: 100%;
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  background-color: #F47F20;
 }
 
 #form-success{
