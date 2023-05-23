@@ -2,6 +2,7 @@ const wpBaseUrl = 'https://project-exam.wp-andersnes.no/wp-json/wp/v2/posts';
 const perPage = 4; // Number of posts to fetch per page
 const parentElement = document.getElementById('div-last-post');
 let currentPage = 1; // Track the current page
+let currentBlogPostTitle = '';
 
 async function getPosts(page) {
   const url = `${wpBaseUrl}?_embed&per_page=${perPage}&page=${page}`;
@@ -41,8 +42,11 @@ async function renderBlogCards() {
     parentElement.appendChild(blogcard);
 
     blogcard.addEventListener('click', () => {
-      window.location.href = `blogdetail.html?id=${blogpost.id}`;
+      const titleQueryParam = encodeURIComponent(blogpost.title.rendered);
+      sessionStorage.setItem('currentBlogPostTitle', blogpost.title.rendered);
+      window.location.href = `blogdetail.html?id=${blogpost.id}&title=${titleQueryParam}`;
     });
+    
   });
 }
 

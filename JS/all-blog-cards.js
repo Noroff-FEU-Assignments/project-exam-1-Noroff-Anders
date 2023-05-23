@@ -38,7 +38,9 @@ async function renderBlogCards() {
       parentElement.appendChild(blogcard);
   
       blogcard.addEventListener('click', () => {
-        window.location.href = `blogdetail.html?id=${blogpost.id}`;
+        const titleQueryParam = encodeURIComponent(blogpost.title.rendered);
+        sessionStorage.setItem('currentBlogPostTitle', blogpost.title.rendered);
+        window.location.href = `blogdetail.html?id=${blogpost.id}&title=${titleQueryParam}`;
       });
   });
 

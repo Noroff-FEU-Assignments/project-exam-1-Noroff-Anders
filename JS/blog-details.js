@@ -3,6 +3,13 @@ const postId = urlParams.get('id');
 const wpBaseUrl = 'https://project-exam.wp-andersnes.no/wp-json/wp/v2/posts';
 const postUrl = `${wpBaseUrl}/${postId}`;
 
+/* updateing the title dynamically */
+const urlParams2 = new URLSearchParams(window.location.search);
+const titleQueryParam = urlParams2.get('title');
+const decodedTitle = decodeURIComponent(titleQueryParam);
+
+document.title = decodedTitle;
+
 const parentElement = document.getElementById('container-blog-detail');
 
 async function getPost() {
