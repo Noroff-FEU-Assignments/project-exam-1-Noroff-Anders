@@ -10,7 +10,7 @@ hamburgerMenu.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 1300) {
+  if (window.innerWidth > 900) {
     nav.style.display = "flex";
   } else {
     nav.style.display = "none";

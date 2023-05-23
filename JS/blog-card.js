@@ -44,7 +44,7 @@ async function renderBlogCards() {
     blogcard.addEventListener('click', () => {
       const titleQueryParam = encodeURIComponent(blogpost.title.rendered);
       sessionStorage.setItem('currentBlogPostTitle', blogpost.title.rendered);
-      window.location.href = `blogdetail.html?id=${blogpost.id}&title=${titleQueryParam}`;
+      window.location.href = `blogdetail.html?id=${blogpost.id}&title=Blogcoin+|+${titleQueryParam}`;
     });
     
   });
