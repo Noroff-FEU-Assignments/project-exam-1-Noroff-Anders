@@ -411,7 +411,7 @@ border-radius: 5px;
   border-radius: 10px;
   background-color: rgb(236, 108, 22);
   font-size: large;
-  color: black;
+  color: rgb(231, 228, 228);
 }
 
 #load-more-button:hover{
