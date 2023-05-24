@@ -413,8 +413,8 @@ border-radius: 5px;
 }
 
 #load-more-button:hover{
-  background-color: white;
-  color: rgb(202, 134, 6);
+  color: white;
+  background-color: rgb(173, 74, 8);
 
 }
 
