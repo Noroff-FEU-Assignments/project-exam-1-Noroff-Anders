@@ -410,9 +410,11 @@ border-radius: 5px;
   color: white;
   border-radius: 10px;
   background-color: rgb(236, 108, 22);
+  font-size: large;
 }
 
 #load-more-button:hover{
+  font-size: large;
   color: white;
   background-color: rgb(173, 74, 8);
 
