@@ -27,6 +27,7 @@ async function renderBlogCards() {
 
     const title = blogpost.title.rendered;
     const featuredImageURL = blogpost._embedded['wp:featuredmedia'][0].source_url;
+    const altText = blogpost._embedded['wp:featuredmedia'][0].alt_text;
 
     const titleElement = document.createElement('h1');
     titleElement.textContent = title;
@@ -35,6 +36,7 @@ async function renderBlogCards() {
 
     const imageElement = document.createElement('img');
     imageElement.src = featuredImageURL;
+    imageElement.alt = altText || 'Image';
     imageElement.classList.add('blog-card-image');
 
     blogcard.appendChild(imageElement);
