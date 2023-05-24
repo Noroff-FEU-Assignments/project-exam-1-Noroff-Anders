@@ -407,11 +407,11 @@ border-radius: 5px;
   display: flex;
   justify-content: center;
   padding: 10px;
-  color: white;
   border-radius: 10px;
-  background-color: rgb(204, 77, 4);
+  background-color: rgb(236, 108, 22);;
   font-size: large;
-  color: rgb(231, 228, 228);
+  border: solid black 2.5px;
+  color: rgb(206, 201, 201);
 }
 
 #load-more-button:hover{
