@@ -591,10 +591,6 @@ border-radius: 5px;
     width: 100%; /* Expand the line on hover */
   }
 
-
- 
-
-
   .div-hamburger-icon{
     display: none;
   }
@@ -657,6 +653,13 @@ border-radius: 5px;
     #indicatorContainer{
       display: none;
     }
+    .header-image{
+      width: 100%;
+      height: 100%;
+      max-width: 200px;
+      max-height: 200px;
+    }
+    
 
  }
 
