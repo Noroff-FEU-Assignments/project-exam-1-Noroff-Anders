@@ -498,6 +498,7 @@ border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   font-size: 20px;
+  justify-content: center;
 }
 
 .image-container{
@@ -537,6 +538,8 @@ border-radius: 5px;
 }
 
 .blog-details-image{
+  display: flex;
+  justify-content: center;
   object-fit: cover;
   width: 100%;
   max-width: 600px;
