@@ -126,13 +126,14 @@ footer{
 
 
 .header-image {
+padding-left:50px;
+padding-right:50px;
 display: flex;
 width: 100%;
 max-width: 400px;
 height: 100%;
 max-height: 400px;
 border-radius: 5px;
-
 
 }
 
