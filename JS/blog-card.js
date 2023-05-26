@@ -18,7 +18,6 @@ async function getPosts(page) {
 async function renderBlogCards() {
   const posts = await getPosts(currentPage);
 
-  // Clearing the parent element
   parentElement.innerHTML = '';
 
   posts.forEach((blogpost) => {
@@ -52,28 +51,27 @@ async function renderBlogCards() {
   });
 }
 
-// Function to handle the next button click event
+
 function handleNextButtonClick() {
   const blogContainer = document.getElementById('blogContainer');
   const indicators = document.querySelectorAll('.indicator');
   
-  currentPage++; // Increment the current page
+  currentPage++; 
 
   if (currentPage > 3) {
     currentPage = 1; // Go back to the starting page
   }
   
-  blogContainer.style.opacity = 0; // Fade out the container
-  indicators[currentPage - 1].classList.add('active'); // Activate the corresponding indicator
+  blogContainer.style.opacity = 0; 
+  indicators[currentPage - 1].classList.add('active'); 
   
   setTimeout(() => {
-    renderBlogCards(); // Render the next set of posts
+    renderBlogCards(); 
     
-    // Fade in the container after the rendering is complete
+ 
     blogContainer.style.opacity = 1;
-  }, 500); // Delay the rendering to allow the fade-out transition to complete
-  
-  // Deactivate the previous indicator
+  }, 500); 
+
   indicators[currentPage - 2 >= 0 ? currentPage - 2 : 2].classList.remove('active');
 }
 
@@ -81,38 +79,35 @@ function handleBackButtonClick() {
   const blogContainer = document.getElementById('blogContainer');
   const indicators = document.querySelectorAll('.indicator');
   
-  currentPage--; // Decrement the current page
+  currentPage--; 
   
   if (currentPage < 1) {
     currentPage = 3; // Go back to the starting page
   }
   
-  blogContainer.style.opacity = 0; // Fade out the container
-  indicators[currentPage - 1].classList.add('active'); // Activate the corresponding indicator
+  blogContainer.style.opacity = 0; 
+  indicators[currentPage - 1].classList.add('active'); 
   
   setTimeout(() => {
     renderBlogCards(); // Render the previous set of posts
     
-    // Fade in the container after the rendering is complete
+   
     blogContainer.style.opacity = 1;
-  }, 500); // Delay the rendering to allow the fade-out transition to complete
+  }, 500); 
   
-  // Deactivate the previous indicator
   const previousIndicatorIndex = (currentPage - 1 + 1) % 3;
   indicators[previousIndicatorIndex].classList.remove('active');
 }
 
+  renderBlogCards();
 
 
-  renderBlogCards(); // Render the next set of posts
 
-
-// Attach the next button click event listener
 const nextButton = document.getElementById('btn-right');
 nextButton.addEventListener('click', handleNextButtonClick);
 
 const backButton = document.getElementById('btn-left');
 backButton.addEventListener('click', handleBackButtonClick);
 
-// Initial rendering of the blog cards
+
 renderBlogCards();

@@ -1,4 +1,5 @@
 const wpBaseUrl = 'https://project-exam.wp-andersnes.no/wp-json/wp/v2/posts';
+
 const parentElement = document.getElementById('div-last-post');
 const loadMoreButton = document.getElementById('load-more-button');
 let currentPage = 1;
@@ -57,6 +58,7 @@ async function renderBlogCards() {
   }
 }
 
+// Load more posts when the button is clicked
 async function loadMorePosts() {
   currentPage++;
   await renderBlogCards();
