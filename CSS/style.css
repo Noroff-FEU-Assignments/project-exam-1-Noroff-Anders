@@ -178,10 +178,11 @@ border-radius: 5px;
 
 #div-last-post{
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+
 }
 
 #btn-right,#btn-left{
@@ -455,7 +456,7 @@ border-radius: 5px;
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 
 
@@ -682,10 +683,3 @@ border-radius: 5px;
   
 
  }
-
-
-
- 
-
-
-
