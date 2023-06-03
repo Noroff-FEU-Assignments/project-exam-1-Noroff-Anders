@@ -8,18 +8,19 @@ Blogcoin is my submission for the project exam 1 that i had during my first year
 
 The website consists of these pages:
 
-- index.html (home page that needed an functional carousel when clicked loads tbe next four blog posts )
-- blogpost.html (Lists all blogposts and has a button that when clicked loads the next blogposts under the rest of th eposts)
+- index.html (home page that needed an functional carousel that  when clicked loads the next four blog posts )
+- blogpost.html (Lists all blogposts and has a button that when clicked loads the remaining blogposts under the rest of the posts)
 - blogdetail.html (Displays images, titles and text from a specific blogpost. title is updatet accordingly)
 - contact.html (a contact form, uses JS for validation)
 - about.html(about page about blogcoins histpry)
 
 ## Built With
 
-- [HTML 5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/CSS)
--[API](Hosted on wordpress through one.com)
+
+- [API](Hosted on wordpress through one.com)
 
 
 ## Getting Started
@@ -34,7 +35,7 @@ git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-Noroff-Anders
 
 2. Install the dependencies:
 
-No need to install any dependencies for this project. Project consists of only HTML, CSS and Javascript
+No need to install any dependencies for this project. Project consists of only HTML, CSS and Javascript.
 
 ### Running
 
